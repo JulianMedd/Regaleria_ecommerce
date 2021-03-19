@@ -47,7 +47,7 @@ export default NavBar;
 
 /* FUNCIONALIDAD NAV */
 
-const navMenu = document.getElementById("nav-menu"),
+/* const navMenu = document.getElementById("nav-menu"),
       toggleMenu = document.getElementById("nav-toggle"),
       closeMenu = document.getElementById("nav-close")
 
@@ -69,3 +69,4 @@ function linkAction(){
 }
 
 navLink.forEach(n => n.addEventListener("click", linkAction))
+ */

@@ -1,0 +1,46 @@
+.itemCount{
+    align-items: center;
+    background-color: white;
+    box-shadow: 6px 5px 24px #666666;
+    width: 300px;
+    padding: 2rem;
+    border-radius: 10px;
+
+    .itemCount__contador{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+
+        button{
+            width: 50px;
+            height: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 20px;
+            color: #ffffff;
+            background-color: pink;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+        }
+
+        div{
+            font-size: 25px;
+            color: pink;
+        }
+    }
+
+    #btn__agregar{
+        width: 100%;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-radius: 10px;
+        border: none;
+        background-color: pink;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+
+    }
+}
