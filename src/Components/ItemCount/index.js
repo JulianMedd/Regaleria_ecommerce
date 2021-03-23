@@ -24,7 +24,7 @@ export const ItemCount = (props) =>{
                 <div>{count}</div>
                 <button disabled={count >= props.stock} onClick={contadorSumar}>+</button>
             </div>
-            <button id="btn__agregar" disabled={count == 0} className="itemCount__btn" onClick={()=>props.agregarCarrito(count)}>AGREGAR AL CARRITO</button>
+            <button id="btn__agregar" disabled={count === 0} className="itemCount__btn" onClick={()=>props.agregarCarrito(count)}>AGREGAR AL CARRITO</button>
         </div>
     )
 }

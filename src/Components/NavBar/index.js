@@ -5,7 +5,7 @@ import CartWidget from "../CartWidget";
 export const NavBar = () => {
     return(
         <header className="cabecera">
-            <a href="#" className="cabecera__logo" target="_blank">TODO AMOR</a>
+            <a href="https://www.goolge.com" className="cabecera__logo" target="_blank">TODO AMOR</a>
 
             <ion-icon name="menu-outline" className="cabecera__toggle" id="nav-toggle"></ion-icon>
 
