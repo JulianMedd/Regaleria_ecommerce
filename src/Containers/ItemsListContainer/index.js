@@ -7,19 +7,19 @@ const prodcuts = [{
     title : "Termo",
     price : 360,
     description : "lorem",
-    image : `https://picsum.photos/200/300`,
+    image : `https://picsum.photos/200/200`,
 },{
     id : 2,
     title : "Mate",
     price : 160,
     description : "lorem",
-    image : `https://picsum.photos/200/300`,
+    image : `https://picsum.photos/200/200`,
 },{
     id : 3,
     title : "Lata",
     price : 560,
     description : "lorem",
-    image : `https://picsum.photos/200/300`,
+    image : `https://picsum.photos/200/200`,
 }]
 
 export const ItemListContainer = () => {
@@ -40,11 +40,6 @@ export const ItemListContainer = () => {
         <div>
             <h3>ListContainer here</h3>
             <ItemList itemsList={items}></ItemList>
-            <ItemCount 
-                stock={5} 
-                initial={1} 
-                agregarCarrito={(count)=>{console.log(count);}}
-            ></ItemCount>
         </div>
     )
 }

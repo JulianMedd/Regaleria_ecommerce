@@ -7,15 +7,15 @@ export const NavBar = () => {
         <header className="cabecera">
             <a href="https://www.goolge.com" className="cabecera__logo" target="_blank">TODO AMOR</a>
 
-            <ion-icon name="menu-outline" className="cabecera__toggle" id="nav-toggle"></ion-icon>
-
+{/*             <ion-icon name="menu-outline" className="cabecera__toggle" id="nav-toggle"></ion-icon>
+ */}
             <nav className="nav" id="nav-menu">
 
                 <div className="nav__contenainer">
                 
                     <div class="nav__content bd-grid">
-                        <ion-icon name="close-outline" className="nav__close" id="nav-close"></ion-icon>
-
+{/*                         <ion-icon name="close-outline" className="nav__close" id="nav-close"></ion-icon>
+ */}
                         <div className="nav__menu">
                             <ul className="nav__lista">
                                 <li className="nav__item"><a href="#sobreNosotros" className="nav__link active">SOBRE NOSOTROS</a></li>

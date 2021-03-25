@@ -1,5 +1,5 @@
 import React from "react";
-import ItemCount from "../ItemCount";
+import "./item.scss";
 
 export const Item = ({product}) =>{
     return (
@@ -11,11 +11,6 @@ export const Item = ({product}) =>{
                     <p className="product__description">{product.description}</p>
                     <div className="product__price">{product.price}</div>
                 </div>
-                <ItemCount 
-                stock={5} 
-                initial={1} 
-                agregarCarrito={(count)=>{console.log(count);}}
-                ></ItemCount>
             </div>
         </article>
     )
