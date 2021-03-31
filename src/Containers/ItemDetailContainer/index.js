@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { ItemDetail } from "../../Components/ItemDetail";
+import { useParams } from "react-router-dom";
 
 /* const itemOne = {
     id : 1,

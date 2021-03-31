@@ -2,10 +2,12 @@ import React from "react";
 import "./navbar.scss"
 import CartWidget from "../CartWidget";
 
+import {Link, NavLink} from "react-router-dom";
+
 export const NavBar = () => {
     return(
         <header className="cabecera">
-            <a href="https://www.goolge.com" className="cabecera__logo" target="_blank">TODO AMOR</a>
+            <Link to="/" className="cabecera__logo" >TODO AMOR</Link>
 
 {/*             <ion-icon name="menu-outline" className="cabecera__toggle" id="nav-toggle"></ion-icon>
  */}
@@ -18,11 +20,11 @@ export const NavBar = () => {
  */}
                         <div className="nav__menu">
                             <ul className="nav__lista">
-                                <li className="nav__item"><a href="#sobreNosotros" className="nav__link active">SOBRE NOSOTROS</a></li>
-                                <li className="nav__item"><a href="#comoComprar" className="nav__link">COMO COMPRAR</a></li>
-                                <li className="nav__item"><a href="#libreria" className="nav__link">LIBRERIA</a></li>
-                                <li className="nav__item"><a href="#accesorios" className="nav__link">ACCESORIOS</a></li>
-                                <li className="nav__item"><a href="#cocina" className="nav__link">COCINA</a></li>
+                                <li className="nav__item"><Link to="/" className="nav__link active">SOBRE NOSOTROS</Link></li>
+                                <li className="nav__item"><Link href="#comoComprar" className="nav__link">COMO COMPRAR</Link></li>
+                                <li className="nav__item"><NavLink to={`category/libreria`} className="nav__link">LIBRERIA</NavLink></li>
+                                <li className="nav__item"><NavLink to={`category/accesorios`} className="nav__link">ACCESORIOS</NavLink></li>
+                                <li className="nav__item"><NavLink to={`category/cocina`} className="nav__link">COCINA</NavLink></li>
                             </ul>
                         </div>
 

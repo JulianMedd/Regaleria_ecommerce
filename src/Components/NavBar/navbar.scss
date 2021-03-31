@@ -5,11 +5,12 @@
     top: 0;
     left: 0;
     padding: 0 1.5rem;
-    background-color: rgb(253, 212, 219);
+    background-color: #f381a7;
     z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 600;
 
     .cabecera__logo{
         color: #efefef;
