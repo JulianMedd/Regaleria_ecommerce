@@ -11,22 +11,22 @@ import { useParams } from "react-router-dom";
 
 const getItem = () =>{
     return new Promise(resolve=>{
-        setTimeout(()=>{resolve(
-            {
-                id : 1,
-                title : "caja",
-                price : 450,
-                image : `https://picsum.photos/200/300`
-            }
+        setTimeout(()=>{
+            resolve({
+                        id : 1,
+                        title : "caja",
+                        price : 450,
+                        image : `https://picsum.photos/200/300`
+                    }
         )},2000)
     })
 }
 
 export const ItemDetailContainer = () => {
-    const [itemD, setItemD] = useState(null)
+    const [itemD, setItemD] = useState([])
 
     useEffect(()=>{
-        getItem().then((res)=>setItemD(res))
+        getItem().then(res=>setItemD(res))
         
     },[])
 

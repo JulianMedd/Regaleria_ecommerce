@@ -2,7 +2,7 @@ import React from "react";
 import "./navbar.scss"
 import CartWidget from "../CartWidget";
 
-import {Link, NavLink} from "react-router-dom";
+import {Link } from "react-router-dom";
 
 export const NavBar = () => {
     return(
@@ -22,9 +22,9 @@ export const NavBar = () => {
                             <ul className="nav__lista">
                                 <li className="nav__item"><Link to="/" className="nav__link active">SOBRE NOSOTROS</Link></li>
                                 <li className="nav__item"><Link href="#comoComprar" className="nav__link">COMO COMPRAR</Link></li>
-                                <li className="nav__item"><NavLink to={`category/libreria`} className="nav__link">LIBRERIA</NavLink></li>
-                                <li className="nav__item"><NavLink to={`category/accesorios`} className="nav__link">ACCESORIOS</NavLink></li>
-                                <li className="nav__item"><NavLink to={`category/cocina`} className="nav__link">COCINA</NavLink></li>
+                                <li className="nav__item"><Link to='category/libreria' className="nav__link">LIBRERIA</Link></li>
+                                <li className="nav__item"><Link to='category/accesorios' className="nav__link">ACCESORIOS</Link></li>
+                                <li className="nav__item"><Link to='category/cocina' className="nav__link">COCINA</Link></li>
                             </ul>
                         </div>
 

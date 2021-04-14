@@ -5,9 +5,7 @@ import { Item } from "../Item";
 export const ItemList = ({itemsList}) =>{
     return(
     <section className="itemList">
-        {itemsList.map(product =>{
-            return  <Item product={product}></Item>
-        })}
+        {itemsList.map(product => <Item product={product}></Item>)}
     </section>
     )
 }

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ItemCount from "../../Components/ItemCount";
 import { ItemList } from "../../Components/ItemList";
 
 const prodcuts = [{
@@ -34,7 +33,7 @@ export const ItemListContainer = () => {
 
         prom.then(res=>setItems(res))
       
-    })
+    },[])
 
     return(
         <div>
