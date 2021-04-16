@@ -22,9 +22,9 @@ export const NavBar = () => {
                             <ul className="nav__lista">
                                 <li className="nav__item"><Link to="/" className="nav__link active">SOBRE NOSOTROS</Link></li>
                                 <li className="nav__item"><Link href="#comoComprar" className="nav__link">COMO COMPRAR</Link></li>
-                                <li className="nav__item"><Link to='category/libreria' className="nav__link">LIBRERIA</Link></li>
-                                <li className="nav__item"><Link to='category/accesorios' className="nav__link">ACCESORIOS</Link></li>
-                                <li className="nav__item"><Link to='category/cocina' className="nav__link">COCINA</Link></li>
+                                <li className="nav__item"><Link to='/category/libreria' className="nav__link">LIBRERIA</Link></li>
+                                <li className="nav__item"><Link to='/category/accesorios' className="nav__link">ACCESORIOS</Link></li>
+                                <li className="nav__item"><Link to='/category/cocina' className="nav__link">COCINA</Link></li>
                             </ul>
                         </div>
 
