@@ -1,52 +1,72 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 
 export const CartContext = React.createContext([])
 
 export const CartProvider = ({children}) =>{
     const [cart, setCart] = useState([])
+    const [total, setTotal] = useState(0)
+    const [cant, setCant] = useState(0)
 
-    
+    useEffect(()=>{
+        let montoTotal = cart.reduce((acumulador,e)=>{
+            let precioU = e.quantity * e.item.price
+            return acumulador + precioU
+        },0)
 
-    const addItem = (item, quantity) =>{
-        console.log(item.id);
-        console.log(isInCart(item.id));
-        if (isInCart(item.id)) {
-            console.log("si esta" + quantity);
-            const itemRepetido = cart.find(e=>e.item.id === item.id)
-            removeItem(item.id)
-            
-        } else {
-            setCart(cart.push({item:item, quantity:quantity}))
+        let totalItems = cart.reduce((accumulador, ItemActual)=>{
+            return accumulador + ItemActual.quantity
+        },0);
+        
+        setTotal(montoTotal)
+        setCant(totalItems)
+    },[cart])
+
+    const addItem = (newItem, newQuantity) =>{
+
+        const prevCartItem = cart.find(e=> e.item.id === newItem.id)
+
+        let newCart;
+        let qty;
+        if (prevCartItem){
+            newCart = cart.filter(e => e.item.id !== newItem.id)
+            qty = prevCartItem.quantity + newQuantity;
+        }else{
+            newCart = [...cart]
+            qty =  newQuantity;
         }
 
+        setCart([...newCart, { item: newItem , quantity: qty  }])
+
         console.log(cart);
-        // if (isInCart(item.id)){
-        //     const itemRepetido = cart.find(e=>e.item.id === item.id)
-        //     removeItem(item.id)
-        //     setCart([...cart,{item:item, quantity: itemRepetido.item.quantity + quantity}])
+        
+        // if (isInCart(newItem.id)){
+        //     const ind = cart.findIndex(e=>e.item.id ===newItem.id)
+        //     cart[ind].quantity += quantity
         // } else {
-        //     setCart(cart.push({item:item, quantity:quantity}))
+        //    cart.push({item : newItem , quantity : quantity})
+            
         // }
         
     }
 
     const removeItem = (itemId) =>{
-        console.log("eliminado");
+        
         const cartNuevo = cart.filter(e=>e.item.id !== itemId)
         setCart(cartNuevo)
+        
     }
 
     const clear = () =>{
         setCart([]);
     }
 
-    const isInCart = (id) =>{
-        console.log(id);
-        const currentItem = cart.find(e=>e.item.id === id)
-
-        return currentItem ? true : false
+    const isInCart = id =>{
         
+        const currentItem = cart.find(e=> e.item.id === id)
+        
+        if(currentItem === undefined) return false
+        else return true
     }
 
-    return <CartContext.Provider value={{cart,addItem,removeItem,clear}}>{children}</CartContext.Provider>
+    return <CartContext.Provider value={{cart,addItem,removeItem,clear,total,cant}}>{children}</CartContext.Provider>
 }
