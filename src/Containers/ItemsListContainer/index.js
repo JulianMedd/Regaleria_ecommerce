@@ -68,9 +68,14 @@ export const ItemListContainer = () => {
 
         prom.then(snaptshot=>{
             if(snaptshot.size > 0){
-                setItems(snaptshot.docs.map(doc=>doc.data()))
-            }
+                setItems(snaptshot.docs.map(doc => {
+                  return {id: doc.id,  ...doc.data()}
+                }
+                  ))
+              }
         })
+
+        console.log(items);
       
     },[categoryId])
 
