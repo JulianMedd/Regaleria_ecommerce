@@ -22,7 +22,7 @@ export const ItemDetailContainer = () => {
         getItem(itemId)
         .then((doc)=>{
             console.log(doc.id);
-            setItem(doc.data())
+            setItem({id: doc.id, ...doc.data()})
         })
     },[itemId])
 

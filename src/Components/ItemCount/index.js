@@ -13,10 +13,6 @@ export const ItemCount = (props) =>{
         setCount(count - 1);
     }
 
-    /* const agregarCarrito= () =>{
-        console.log(count);
-    } */
-
     return(
         <div className="itemCount">
             <div className="itemCount__contador">

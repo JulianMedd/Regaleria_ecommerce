@@ -4,100 +4,37 @@
     position: fixed;
     top: 0;
     left: 0;
-    padding: 0 1.5rem;
     background-color: #f381a7;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-weight: 600;
+    display: flex;
 
-    .cabecera__logo{
-        color: #efefef;
-    }
-
-    .cabecera__toggle{
-        font-size: 1.5rem;
-        color: #efefef;
-        cursor: pointer;
-    }
-
-    .nav__lista{
+    .nav__container{
+        width: 80%;
+        margin: auto;
         display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        
 
-        .nav__item{
-            padding-right: 1rem;
+        .cabecera__logo{
+            color: #efefef;
+        }
+    
+        .nav__lista{
+            display: flex;
+            
+    
+            .nav__item{
+                padding-right: 1rem;
+
+                .nav__link:hover{
+                    background-color: hotpink;
+                }
+            }
+            
         }
     }
 
-    .nav__content{
-        display: flex;
-    }
 }
 
 
-@media screen and (max-width: 768px){
-    .nav{
-        position: fixed;
-        top: 0;
-        left: -100%;
-        background-color: #f38dc0;
-        color: #efefef;
-        width: 100%;
-        height: 100vh;
-        padding: 1.5rem 0;
-        z-index: 3;
-        transition: .5s;
-
-        .nav__content{
-            height: 100%;
-            grid-template-rows: max-content 1fr max-content;
-            row-gap: 2rem;
-
-            .nav__close{
-                position: absolute;
-                right: 1.5rem;
-                font-size: 1.5rem;
-                padding: .25rem;
-                background-color: #5d0230;
-                border-radius: 50%;
-                cursor: pointer;
-            }
-
-            .nav__menu{
-                align-self: center;
-
-                .nav__lista{
-                    .nav__item{
-                        margin: 2.5rem 0;
-
-                        .nav__link{
-                            color: #efefef;
-                        }
-
-                        .active{
-                            color: #5d0230;
-                        }
-                    }
-                }
-            }
-
-            .nav__redes{
-                padding-top: .5rem;
-
-                .nav__redes--icono{
-                    font-size: 1.2rem;
-                    color: #efefef;
-                    margin-right: 1.5rem;
-                    &:hover{
-                        color: #5d0230;
-                    }
-                }
-            }
-        }
-    }    
-}
-
-.show{
-    left: 0;
-}

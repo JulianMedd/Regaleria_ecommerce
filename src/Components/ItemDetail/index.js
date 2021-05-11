@@ -1,5 +1,6 @@
 import React,{ useState, useContext } from "react";
 import ItemCount from "../ItemCount";
+import "./itemDetail.scss";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 
@@ -13,19 +14,28 @@ export const ItemDetail = ({item}) => {
         setCount(contador)
     }
 
-
-
     return (
-        <div>
-            <h3>item detail</h3>
-            <h3>{item.title}</h3>
-            <img src={item.image}/>
-            {count === 0 ? 
-                <ItemCount initial={0} stock={5} onAdd={agregar}></ItemCount>
-                :
-                <Link to="/cart">
-                    <button>TERMINAR COMPRA</button>
-                </Link>}
+        <div className="cardDetail">
+            <h3>DETALLE DEL PRODUCTO</h3>
+            <section className="cardDetail__container">
+                <div className="cardDetail__info">
+
+                    <h3>{item.title}</h3>
+                    <img src={item.image} alt={item.title}/>
+                    <p>{item.description}</p>
+
+                </div>
+                <div>
+
+                    {count === 0 ? 
+                        <ItemCount initial={0} stock={item.stock} onAdd={agregar}></ItemCount>
+                        :
+                        <Link to="/cart">
+                            <button>TERMINAR COMPRA</button>
+                        </Link>}
+                </div>
+
+            </section>
         </div>
     )
 }

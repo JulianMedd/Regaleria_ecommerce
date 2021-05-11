@@ -1,0 +1,16 @@
+.items__container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .tituloCategoria{
+        color: #f381a7;
+        width: 100%;
+        margin: 2rem auto;
+        padding: 1.5rem 0;
+        text-transform: uppercase;
+        border-bottom: 1px solid #f381a7;
+    }
+}

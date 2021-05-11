@@ -1,7 +1,6 @@
 .itemCount{
+    
     align-items: center;
-    background-color: white;
-    box-shadow: 6px 5px 24px #666666;
     width: 300px;
     padding: 2rem;
     border-radius: 10px;
@@ -18,7 +17,7 @@
             font-weight: 600;
             font-size: 20px;
             color: #ffffff;
-            background-color: pink;
+            background-color: #f381a7;
             border-radius: 50%;
             border: none;
             cursor: pointer;
@@ -26,7 +25,7 @@
 
         div{
             font-size: 25px;
-            color: pink;
+            color: #f381a7;
         }
     }
 
@@ -37,7 +36,7 @@
         padding-bottom: 1rem;
         border-radius: 10px;
         border: none;
-        background-color: pink;
+        background-color: #f381a7;
         color: white;
         font-size: 15px;
         cursor: pointer;

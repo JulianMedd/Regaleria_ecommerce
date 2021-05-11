@@ -1,0 +1,63 @@
+.cardCarrito{
+    width: 60%;
+    margin: auto;
+
+    h3{
+        text-transform: uppercase;
+        color: #f381a7;
+    }
+
+    .cardCarrito__container{
+
+        .cardCarrito__info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f381a7;
+            padding: 0.5rem;
+            text-transform: uppercase;
+            color: #f381a7;
+    
+            button{
+                width: 80px;
+                margin-top: 1rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                border-radius: 10px;
+                border: none;
+                background-color: #f381a7;
+                color: white;
+                font-size: 15px;
+                cursor: pointer;
+            }
+        }
+
+        form{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 2rem;
+
+            input{
+                width: 100%;
+                margin-top: 1.5rem;
+                height: 2.5rem;
+                border-radius: 10px;
+                border: none;
+            }
+        }
+    }
+
+    button{
+        width: 100%;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-radius: 10px;
+        border: none;
+        background-color: #f381a7;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+    }
+}

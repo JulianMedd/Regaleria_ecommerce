@@ -27,7 +27,7 @@ export const CartProvider = ({children}) =>{
 
         let newCart;
         let qty;
-        if (prevCartItem){
+        if (prevCartItem){  //podria evaluar la sentencia con isInCart()
             newCart = cart.filter(e => e.item.id !== newItem.id)
             qty = prevCartItem.quantity + newQuantity;
         }else{
@@ -37,23 +37,11 @@ export const CartProvider = ({children}) =>{
 
         setCart([...newCart, { item: newItem , quantity: qty  }])
 
-        console.log(cart);
-        
-        // if (isInCart(newItem.id)){
-        //     const ind = cart.findIndex(e=>e.item.id ===newItem.id)
-        //     cart[ind].quantity += quantity
-        // } else {
-        //    cart.push({item : newItem , quantity : quantity})
-            
-        // }
-        
     }
 
     const removeItem = (itemId) =>{
-        
         const cartNuevo = cart.filter(e=>e.item.id !== itemId)
         setCart(cartNuevo)
-        
     }
 
     const clear = () =>{
