@@ -1,5 +1,7 @@
 # E-Commerce / PROYECTO
 
+![alt text](https://github.com/JulianMedd/Regaleria_ecommerce/blob/main/public/Animation.gif "Logo Title Text 1")
+
 ## La aplicacion se creo con REACT JS / create react app
 
     npm install creat-react-app
